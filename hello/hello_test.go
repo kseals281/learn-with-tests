@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -40,5 +41,10 @@ func TestHello(t *testing.T) {
 			t.Errorf("got %q want %q", got, tt.want)
 		}
 	}
+}
 
+func ExampleHello() {
+	got := Hello("Example", "")
+	fmt.Println(got)
+	// Output: Hello, Example
 }
